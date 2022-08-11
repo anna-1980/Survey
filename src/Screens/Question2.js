@@ -19,6 +19,8 @@ const Question2 = ({userNameInput}) => {
     <>
     <h3>Question 2</h3>
     <h2>Please select at least one option</h2>
+    
+
     <ForwardButton onClick={question2Next} 
           value="NEXT"/>
     <BackButton   

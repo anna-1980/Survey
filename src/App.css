@@ -19,10 +19,12 @@ h1{
 }
 
 h2{
+  margin-bottom: 1.6rem;
   font-size: 4.5rem;
 }
 
 h3{
+  margin-bottom: 1.6rem;
   font-size: 2rem;
 }
 
@@ -53,14 +55,53 @@ button{
   padding: 10rem;
 }
 
-.surveyQuestions{
+.surveyQuestions, label{
+  margin-top: 3.6rem;
+  margin-bottom: 5rem;
+  height: 3rem;
+  width: 30rem;
   display:flex;
   align-items: center;
-  justify-items: center;
+  justify-content: center;
 }
 
-.backButton{
+ label{
+  font-size: 2.4rem;
+  padding: 1rem;
+}
+input[type="checkbox"]{
+  position: relative;
+  -webkit-appearance: none;
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1rem;
+  border: 2px solid #6A6A6A;
+  border-radius: 50%;
+  background-color: black;
+}
+.question-1:checked{
+  background-color: white;
+}
+.question-1:checked:after{
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '\2713';
+  margin-top: 0.1rem;
+  padding-left: 0.6rem;
+  /* background-color: pink; */
+  font-family: "Inter", "system-ui";
+  font-size: 1.8rem;
+  text-align: center;
+  transform: scaleY(0.8);
+  /* padding-left: 0.6rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0; */
+   
+  color:black;
 
+}
+.backButton{
   color: white;
   background-color: black;
   border: none;

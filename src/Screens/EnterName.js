@@ -15,7 +15,7 @@ const EnterName = ({userNameInput, setUserName}) => {
     const enterNameNext = (e) => {
         navigate( `/question1` );
         console.log("go to question1");
-        
+        setUserName(localStorage.getItem('userName'));
       }
 
     const inputTextHandler = (e) => {

@@ -57,34 +57,37 @@ const Question1 = ({userNameInput, setUserName, question1Answer, setQuestion1Ans
 
   return (
     <>
-         <h3>Question1</h3>
+         <h3>Question 1</h3>
          <h2>How often do you visit this website</h2>
-         <div className='surveyQuestions'>
-         <label>
-        <input
-          type="checkbox"
-          checked={checkedOne}
-          onChange={handleChangeOne}
-        />
-       Often
-      </label>
-      <label>
-        <input
-          type="checkbox"
-          checked={checkedTwo}
-          onChange={handleChangeTwo}
-        />
-        Rarely
-      </label>
-      <label>
-        <input
-          type="checkbox"
-          checked={checkedThree}
-          onChange={handleChangeThree}
-        />
-        Never
-      </label>
-         </div>
+    <div className='surveyQuestions'>
+            <label>
+            <input
+            className='question-1'
+            type="checkbox"
+            checked={checkedOne}
+            onChange={handleChangeOne}
+            />
+        Often
+        </label>
+        <label>
+            <input
+            className='question-1'
+            type="checkbox"
+            checked={checkedTwo}
+            onChange={handleChangeTwo}
+            />
+            Rarely
+        </label>
+        <label>
+            <input
+            className='question-1'
+            type="checkbox"
+            checked={checkedThree}
+            onChange={handleChangeThree}
+            />
+            Never
+        </label>
+    </div>
 
         <ForwardButton onClick={question1Next} 
           value="NEXT"/>

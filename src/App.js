@@ -18,7 +18,7 @@ function App() {
     useEffect(() => {
  
         // setUserName(localStorage.getItem('userName'));
-        console.log("from App.js" + userNameInput)
+        console.log("Name from App.js" + userNameInput)
         console.log("Answer1 App.js value = " + question1Answer)
       }, [userNameInput, question1Answer]);
 
