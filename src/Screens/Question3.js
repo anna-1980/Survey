@@ -11,7 +11,7 @@ const Question3 = ({userNameInput, setQuestion3Answer}) => {
         console.log('go back')
         navigate(-1);}
 
-    const question2Next = (e) => {
+    const question3Next = (e) => {
         navigate( `/summary` );
         console.log("go to summary");
         setQuestion3Answer(localStorage.getItem("Question3Score"));
@@ -21,7 +21,7 @@ const Question3 = ({userNameInput, setQuestion3Answer}) => {
   <>
      <h3>Question 3</h3>
     <h2>Where are you from?</h2>
-    <ForwardButton onClick={question2Next} 
+    <ForwardButton onClick={question3Next} 
           value="NEXT"/>
     <BackButton   
         onClick={goBack} 
