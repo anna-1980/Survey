@@ -24,6 +24,9 @@ function App() {
 
   return (
      <div className='mainContainer'>
+         <div className='frame'>
+        {userNameInput ? (<h3 className='userName'>SURVEY FOR: {JSON.parse(userNameInput).toUpperCase()}</h3>) : (<h3 className='userName'>SURVEY FOR:</h3>) }
+     </div>
         <Routes>
           <Route path="/" element={
             <MainScreen

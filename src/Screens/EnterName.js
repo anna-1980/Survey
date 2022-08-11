@@ -33,6 +33,7 @@ const EnterName = ({userNameInput, setUserName}) => {
         <input 
         className='enterName' 
         type="text" 
+        placeholder='John Doe'
         onChange={inputTextHandler}/>
         <ForwardButton onClick={enterNameNext} 
         value="NEXT"/>
