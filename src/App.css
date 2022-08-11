@@ -59,7 +59,7 @@ button{
   margin-top: 3.6rem;
   margin-bottom: 5rem;
   height: 3rem;
-  width: 30rem;
+  width: 55rem;
   display:flex;
   align-items: center;
   justify-content: center;
@@ -69,7 +69,7 @@ button{
   font-size: 2.4rem;
   padding: 1rem;
 }
-input[type="checkbox"]{
+.question-1[type="checkbox"]{
   position: relative;
   -webkit-appearance: none;
   width: 3rem;
@@ -102,6 +102,19 @@ input[type="checkbox"]{
   color:black;
 
 }
+
+.question-2[type="checkbox"]{
+  -webkit-appearance: none;
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1rem;
+  border: 2px solid #6A6A6A;
+}
+.question-1:checked{
+  background-color: white;
+  border: 2px solid transparent
+}
+
 .backButton{
   color: white;
   background-color: black;
