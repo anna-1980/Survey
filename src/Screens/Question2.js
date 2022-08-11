@@ -3,29 +3,25 @@ import { Routes, Route, useNavigate } from "react-router-dom";
 import ForwardButton from '../components/ForwardButton';
 import BackButton from '../components/BackButton';
 
-const Question2 = ({userNameInput}) => {
+const Question2 = ({userNameInput, setQuestion2Answer}) => {
     let navigate = useNavigate();
 
 //-----Component State-------------//  
 const [checkedOne, setCheckedOne] = useState(false);
 const [checkedTwo, setCheckedTwo] = useState(false);
 const [checkedThree, setCheckedThree] = useState(false);
+const [question2Score, setQuestion2Score] = useState();
 
 const handleChangeOne = () => {
     setCheckedOne(!checkedOne);
-    setCheckedTwo(false);
-    setCheckedThree(false);
+
   };
 
 const handleChangeTwo = () => {
-    setCheckedOne(false);
     setCheckedTwo(!checkedTwo);
-    setCheckedThree(false);
   };
 
 const handleChangeThree = () => {
-    setCheckedOne(false);
-    setCheckedTwo(false);
     setCheckedThree(!checkedThree);
   };
 //-----Component State-------------//  
@@ -38,7 +34,35 @@ const handleChangeThree = () => {
     const question2Next = (e) => {
         navigate( `/question3` );
         console.log("go to question3");
+        setQuestion2Answer(localStorage.getItem("Question2Score"));
         }
+
+    useEffect(() => {
+        console.log("from question1 " + userNameInput );
+        let option1;
+        let option2;
+        let option3;
+        let question2Score = 0;
+        if (checkedOne && !checkedTwo &&!checkedThree){
+            question2Score = 2
+        }else if(!checkedOne && checkedTwo &&!checkedThree){
+            question2Score = 2
+        } else if (!checkedOne && !checkedTwo &&checkedThree) {
+            question2Score = 2
+        } else if (!checkedOne && checkedTwo &&checkedThree){
+            question2Score = 4
+        }else if (checkedOne && checkedTwo && !checkedThree){
+            question2Score = 4
+        }else if(!checkedOne && checkedTwo && checkedThree){
+            question2Score = 4
+        }else if(checkedOne && !checkedTwo && checkedThree){
+            question2Score = 4
+        }else if(checkedOne && checkedTwo && checkedThree){
+            question2Score = 6
+        }
+        console.log("Question2Score " + question2Score);
+        setQuestion2Score(localStorage.setItem("Question2Score", question2Score))
+        }, [checkedOne, checkedTwo, checkedThree, question2Score])
 
   return (
     <>

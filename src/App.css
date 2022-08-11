@@ -131,23 +131,32 @@ button{
   font-size: 1.8rem;
   text-align: center;
   transform: scaleY(0.8);
-  /* padding-left: 0.6rem;
-  padding-top: 0.8rem;
-  padding-bottom: 0; */
-   
   color:black;
-
 }
 
 .question-2[type="checkbox"]{
+  position: relative;
   -webkit-appearance: none;
   width: 3rem;
   height: 3rem;
   margin-right: 1rem;
   border: 2px solid #6A6A6A;
 }
-.question-1:checked{
+.question-2:checked{
   background-color: white;
   border: 2px solid transparent
 }
-
+.question-2:checked:after{
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '\2713';
+  margin-top: 0.2rem;
+  padding-left: 0.4rem;
+  /* background-color: pink; */
+  font-family: "Inter", "system-ui";
+  font-weight: 300;
+  font-size: 1.8rem;
+  transform: scaleX(1.6);
+  color:black;
+}
