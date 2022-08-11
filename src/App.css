@@ -1,38 +1,62 @@
-.App {
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  color: white;
+  background-color: black;
+  font-size: 62.5%;
+  font-family: "Inter", "system-ui";
+  scroll-behavior: smooth;
+  /* font-family: 'Roboto Slab', serif; */
+}
+
+h1{
+  font-size: 8rem;
+
+}
+
+h2{
+  font-size: 4.5rem;
+}
+
+h3{
+  font-size: 2rem;
+}
+
+p{
+  margin: 3rem 0;
+  font-size: 2rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button{
+  height: 66px;
+  width: 254px;
+  margin: 2rem auto;
+  padding: 2rem 6rem;
+  display: inline-block;
+  color: black;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  background-color: white;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+.mainContainer{
+  display:flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 10rem;
+}
+
+.backButton{
+
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  background-color: black;
+  border: none;
+  font-size: 1.5rem;
 }
