@@ -25,7 +25,9 @@ function App() {
   return (
      <div className='mainContainer'>
         <Routes>
-          <Route path="/" element={<MainScreen/>} />
+          <Route path="/" element={
+            <MainScreen
+             userNameInput={userNameInput}/>} />
           <Route path="enterName" element={
             <EnterName 
              userNameInput={userNameInput} 
