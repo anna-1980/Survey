@@ -53,6 +53,12 @@ button{
   padding: 10rem;
 }
 
+.surveyQuestions{
+  display:flex;
+  align-items: center;
+  justify-items: center;
+}
+
 .backButton{
 
   color: white;

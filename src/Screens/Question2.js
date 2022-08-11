@@ -5,7 +5,7 @@ import BackButton from '../components/BackButton';
 
 const Question2 = ({userNameInput}) => {
     let navigate = useNavigate();
-    console.log(userNameInput)
+    console.log(userNameInput+ 'from Question2')
     const goBack = (e) => {
         console.log('go back')
         navigate(-1);}

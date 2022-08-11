@@ -1,5 +1,5 @@
 import './App.css';
-import {useState} from 'react';
+import {useState , useEffect} from 'react';
 import { Routes, Route, useNavigate } from "react-router-dom";
 import ForwardButton from './components/ForwardButton';
 import MainScreen from './Screens/MainScreen';
@@ -9,8 +9,18 @@ import Question2 from './Screens/Question2'
 
 function App() {
 
-  const  [userNameInput, setUserName] = useState('');
-  const  [question1Answer, setQuestion1Answer] = useState('');
+  const  [userNameInput, setUserName] = useState( () => {
+    const newUser = localStorage.getItem('userName');
+    return newUser || "";
+  });
+  const  [question1Answer, setQuestion1Answer] = useState(localStorage.getItem('Question1Score'));
+
+    useEffect(() => {
+ 
+        // setUserName(localStorage.getItem('userName'));
+        console.log("from App.js" + userNameInput)
+        console.log("Answer1 App.js value = " + question1Answer)
+      }, [userNameInput, question1Answer]);
 
   return (
      <div className='mainContainer'>
@@ -22,10 +32,15 @@ function App() {
              setUserName={setUserName}/>} />
           <Route path="question1" element={
             <Question1 
-              userNameInput={userNameInput} />} />
+              userNameInput={userNameInput} 
+              setUserName={setUserName}
+              question1Answer={question1Answer}
+              setQuestion1Answer={setQuestion1Answer}
+              />} />
           <Route path="question2" element={
             <Question2 
-              userNameInput={userNameInput} />} />     
+              userNameInput={userNameInput} 
+              setUserName={setUserName}/>} />     
       </Routes>
      
     </div>

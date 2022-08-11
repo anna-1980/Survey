@@ -1,9 +1,11 @@
 import React from 'react'
 
-const ForwardButton = ({value, onClick}) => {
+const ForwardButton = ({value, onClick, type}) => {
   return (
     <button
-    onClick={() => onClick()}>{value}</button>
+    onClick={() => onClick()}
+    type={type}
+    >{value}</button>
   )
 }
 

@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import { Routes, Route, useNavigate } from "react-router-dom";
 import ForwardButton from '../components/ForwardButton';
 import BackButton from '../components/BackButton';
@@ -15,16 +15,17 @@ const EnterName = ({userNameInput, setUserName}) => {
     const enterNameNext = (e) => {
         navigate( `/question1` );
         console.log("go to question1");
-        setUserName(e.target.value)
+        
       }
 
     const inputTextHandler = (e) => {
-        
-        setUserName(e.target.value);
+        // setUserName(e.target.value);
+        console.log(e.target.value);
+        setUserName(localStorage.setItem("userName", JSON.stringify(e.target.value)));
         console.log("handle input field" + userNameInput);
-        console.log(e.target);
     };
 
+ 
   return (
     <div className='mainContainer'> 
         <h3>who are you ?</h3>
