@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Routes, Route, useNavigate } from "react-router-dom";
 import ForwardButton from '../components/ForwardButton';
 import BackButton from '../components/BackButton';
+import DropDown from '../components/DropDown'
 
 const Question3 = ({userNameInput, setQuestion3Answer}) => {
     let navigate = useNavigate();
@@ -21,6 +22,9 @@ const Question3 = ({userNameInput, setQuestion3Answer}) => {
   <>
      <h3>Question 3</h3>
     <h2>Where are you from?</h2>
+
+    <DropDown />
+
     <ForwardButton onClick={question3Next} 
           value="NEXT"/>
     <BackButton   
