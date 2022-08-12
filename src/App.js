@@ -18,15 +18,25 @@ function App() {
   const  [question1Answer, setQuestion1Answer] = useState(localStorage.getItem('Question1Score'));
   const  [question2Answer, setQuestion2Answer] = useState(localStorage.getItem('Question2Score'));
   const  [question3Answer, setQuestion3Answer] = useState(localStorage.getItem('Question3Score'));
+  const  [question3Score, setQuestion3Score] = useState();
   const  [finalScore, setFinalScore] = useState();
-    useEffect(() => {
  
+
+    useEffect(() => {
+      if(question3Answer === "Germany"){
+        setQuestion3Score(3)
+      } else if(question3Answer === "Spain"){
+        setQuestion3Score(3)
+      }else{
+        setQuestion3Score(5)
+      }
         // setUserName(localStorage.getItem('userName'));
         console.log("Name from App.js" + userNameInput)
         console.log("Answer1 App.js value = " + question1Answer)
         console.log("Answer2 App.js value = " + question2Answer)
         console.log("Answer3 App.js value = " + question3Answer)
-      }, [userNameInput, question1Answer, question2Answer]);
+        console.log("countryScore value = " + question3Score)
+      }, [userNameInput, question1Answer, question2Answer, question3Score]);
 
   return (
      <div className='mainContainer'>

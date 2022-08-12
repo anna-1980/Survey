@@ -15,7 +15,7 @@ const Results = ({userNameInput, finalScore}) => {
     const resultsNext = (e) => {
         navigate( `/` );
         console.log("reset");
-        localStorage.clear();
+        // localStorage.clear();
         }
 
   return (
@@ -24,7 +24,7 @@ const Results = ({userNameInput, finalScore}) => {
     <h2>Your Score</h2>
     <h3>{JSON.parse(userNameInput).toUpperCase()}</h3>
     <br />
-    <h2 className='finalPoints'>50</h2>
+    <h2 className='finalPoints'>{finalScore}</h2>
     <h4>Points</h4>
    
     <ForwardButton onClick={resultsNext} 
