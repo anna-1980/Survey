@@ -22,9 +22,9 @@ const Question3 = ({userNameInput, setQuestion3Answer}) => {
   <>
      <h3>Question 3</h3>
     <h2>Where are you from?</h2>
-
-    <DropDown />
-
+        <div className='surveyQuestions'>
+            <DropDown />
+        </div>
     <ForwardButton onClick={question3Next} 
           value="FINISH"/>
     <BackButton   

@@ -1,40 +1,12 @@
 import { useEffect, useState } from 'react';
 
 const DropDown = () => {
-  const [state, setState] = useState();
   const [isActive, setIsActive] = useState(false);
   const [selectCountry, setSelectCountry] = useState('')
   const countries = ["Germany", "Sweden", "Italy", "Spain" ]
-  const chooseCountry = (e) => {
-    console.log(e.target.value)
-    console.log(e.target.textContent)
-     
-    }
 
-//   const handleChange = (e) => {
-//     setState(e.target.value);
-//     }
-
-//   const  handleSubmit = (e) => {
-//     alert('Your favorite flavor is: ' + state);
-//     e.preventDefault();
-//     }
   return (
     <>
-    {/* <form action="submit">
-    <div className="select">
-       <select 
-        id="country" 
-        name="country" 
-        className="selectCountry" 
-        onChange={chooseCountry}>
-            <option value="Germnay">Germnay</option>
-            <option value="Sweden">Sweden</option>
-            <option value="Italy">Italy</option>
-            <option value="Spain">Spain</option>
-        </select>
-    </div> 
-    </form> */}
     <div className='dropDownContainer'>
         <div className="dropDown">
             <div 
