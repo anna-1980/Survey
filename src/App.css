@@ -283,3 +283,17 @@ option{
 .finalPoints{
   margin: 0;
 }
+
+.resultBar{
+  margin-top: 1.5rem;
+  height: 3rem;
+  width: 50rem;
+  position: relative;
+  border: 2px solid white;
+}
+.resultBar::before{
+  position: absolute;
+
+  background-color: rgb(117, 114, 114);
+  border: 2px solid white;
+}
