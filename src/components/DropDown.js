@@ -50,10 +50,10 @@ const DropDown = () => {
                     className='dropDownItem'
                     key={index} 
                     onClick={(e) =>{
-                    setSelectCountry(e.target.textContent);
+                    setSelectCountry(option);
                     setIsActive(false);
                     console.log(selectCountry);
-                    localStorage.setItem("Question3Score", selectCountry);
+                    localStorage.setItem("Question3Score", option);
                   }} 
                  >{option}</div>
                ))}

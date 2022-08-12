@@ -7,6 +7,7 @@ import EnterName from './Screens/EnterName';
 import Question1 from './Screens/Question1';
 import Question2 from './Screens/Question2';
 import Question3 from './Screens/Question3';
+import Results from './Screens/Results';
 
 function App() {
 
@@ -17,13 +18,14 @@ function App() {
   const  [question1Answer, setQuestion1Answer] = useState(localStorage.getItem('Question1Score'));
   const  [question2Answer, setQuestion2Answer] = useState(localStorage.getItem('Question2Score'));
   const  [question3Answer, setQuestion3Answer] = useState(localStorage.getItem('Question3Score'));
-
+  const  [finalScore, setFinalScore] = useState();
     useEffect(() => {
  
         // setUserName(localStorage.getItem('userName'));
         console.log("Name from App.js" + userNameInput)
         console.log("Answer1 App.js value = " + question1Answer)
         console.log("Answer2 App.js value = " + question2Answer)
+        console.log("Answer3 App.js value = " + question3Answer)
       }, [userNameInput, question1Answer, question2Answer]);
 
   return (
@@ -58,6 +60,12 @@ function App() {
              setUserName={setUserName}
              setQuestion2Answer={setQuestion3Answer}
           />} />  
+         <Route path="results" element={
+            <Results 
+             userNameInput={userNameInput} 
+             setUserName={setUserName}
+             finalScore={finalScore}
+          />} /> 
       </Routes>
      
     </div>

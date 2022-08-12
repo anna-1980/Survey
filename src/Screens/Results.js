@@ -4,29 +4,28 @@ import ForwardButton from '../components/ForwardButton';
 import BackButton from '../components/BackButton';
 import DropDown from '../components/DropDown'
 
-const Question3 = ({userNameInput, setQuestion3Answer}) => {
+const Results = ({userNameInput, finalScore}) => {
     let navigate = useNavigate();
 
-    console.log(userNameInput+ 'from Question3')
+    console.log(userNameInput+ 'from Results')
     const goBack = (e) => {
         console.log('go back')
         navigate(-1);}
 
-    const question3Next = (e) => {
-        navigate( `/results` );
-        console.log("go to results");
-        setQuestion3Answer(localStorage.getItem("Question3Score"));
+    const resultsNext = (e) => {
+        navigate( `/` );
+        console.log("reset");
+        
         }
 
   return (
-  <>
-     <h3>Question 3</h3>
+    <>
+    <h3>Question 3</h3>
     <h2>Where are you from?</h2>
 
-    <DropDown />
-
-    <ForwardButton onClick={question3Next} 
-          value="FINISH"/>
+   
+    <ForwardButton onClick={resultsNext} 
+          value="START NEW"/>
     <BackButton   
         onClick={goBack} 
         value="BACK" />
@@ -34,4 +33,4 @@ const Question3 = ({userNameInput, setQuestion3Answer}) => {
   )
 }
 
-export default Question3
+export default Results

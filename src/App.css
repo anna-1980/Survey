@@ -235,10 +235,10 @@ option{
 
 .dropDown{
   position: relative;
-  width: 200px;
+  width: 50rem;
   margin: 0 auto;
   padding: 0;
-  background-color: rgb(121, 136, 122);
+  /* background-color: rgb(121, 136, 122); */
   user-select: none;
 
 }
@@ -246,28 +246,33 @@ option{
 .dropDown .dropDownBtn{
   display: flex;
   padding: 0.5rem 1rem ;
-  background-color: rgb(148, 140, 88);
+  background-color: black;
+  border: 2px solid white;
   align-items: center;
   justify-content: space-between;
-  cursor: grabbing;
+  font-size: 2.2rem;
+  cursor: pointer;
 }
 
 .dropDown .dropDownContent{
   position: absolute;
-  background-color: #986d95;
-  top: 100%;
+  background-color: black;
+  border: 2px solid white;
+  top: calc(100% - 0.2rem);
   left: 0;
   width: 100%;
-  padding: 0.2rem 0.5rem;
+  font-size: 2.2rem;
 }
 
 .dropDown .dropDownContent .dropDownItem{
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   cursor: pointer;
   transition: all 0.3s;
 }
 
 .dropDown .dropDownContent .dropDownItem:hover{
-  padding: 0.5rem;
-  background-color: #7d954f;
+  padding: 0.5rem 1rem;
+  color: black;
+  background-color: white;
+  
 }
