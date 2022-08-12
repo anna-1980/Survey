@@ -307,19 +307,35 @@ option{
 }
 
 .progresBarContainer {
-  position: relative;
-  margin-top: 1.7rem;
+  position: absolute;
+  display: inline-block;
+  bottom: 7vh;
+  left: 6vw;
   height: 1rem;
-  width: 50rem;
+  width: calc(88vw - 10px);
   border: 1px solid #707070;
   border-radius: 10px;
   overflow: hidden;
+  z-index: 2;
+ 
 }
+ 
+
 .progresBar{
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   background-color: white;
+}
+
+.progresTrack{
+  position: absolute;
+  text-align: right;
+  bottom: calc(7vh + 20px);
+  right: calc(6vw + 10px);
+  height: 1rem;
+  width: 50vw;
+  color: #767676;
 }
  

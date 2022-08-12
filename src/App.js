@@ -44,7 +44,7 @@ function App() {
         console.log("Answer3 App.js value = " + question3Answer)
         console.log("countryScore value = " + question3Score)
         console.log("FinalScore value = " + finalScore)
-      }, [userNameInput, question1Answer, question2Answer, question3Score, finalScore]);
+      }, [userNameInput, question1Answer, question2Answer, question3Answer, question3Score, finalScore]);
 
   return (
      <div className='mainContainer'>

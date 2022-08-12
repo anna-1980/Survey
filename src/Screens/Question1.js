@@ -97,7 +97,7 @@ const Question1 = ({userNameInput, setUserName, question1Answer, setQuestion1Ans
           value="NEXT"/>
         <BackButton   onClick={goBack} 
           value="BACK"/>
-
+      
       <ProgressBar question1/>
     </div>
   )
