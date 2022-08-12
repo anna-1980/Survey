@@ -26,7 +26,7 @@ const Question3 = ({userNameInput, setQuestion3Answer}) => {
     <DropDown />
 
     <ForwardButton onClick={question3Next} 
-          value="NEXT"/>
+          value="FINISH"/>
     <BackButton   
         onClick={goBack} 
         value="BACK" />

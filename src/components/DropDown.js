@@ -1,23 +1,68 @@
 import { useEffect, useState } from 'react';
 
 const DropDown = () => {
-
-const chooseCountry = (e) => {
+  const [state, setState] = useState();
+  const [isActive, setIsActive] = useState(false);
+  const [selectCountry, setSelectCountry] = useState('')
+  const countries = ["Germany", "Sweden", "Italy", "Spain" ]
+  const chooseCountry = (e) => {
     console.log(e.target.value)
-}
-    // useEffect(() => {
-      
-    //  }, [ ])
- 
+    console.log(e.target.textContent)
+     
+    }
 
+//   const handleChange = (e) => {
+//     setState(e.target.value);
+//     }
+
+//   const  handleSubmit = (e) => {
+//     alert('Your favorite flavor is: ' + state);
+//     e.preventDefault();
+//     }
   return (
     <>
-        <nav className='dropDown'>
-            <ul className='choice1'>Germany</ul>
-            <ul className='choice1'>Sweden</ul>
-            <ul className='choice1'>Italy</ul>
-            <ul className='choice1'>Spain</ul>
-        </nav>
+    {/* <form action="submit">
+    <div className="select">
+       <select 
+        id="country" 
+        name="country" 
+        className="selectCountry" 
+        onChange={chooseCountry}>
+            <option value="Germnay">Germnay</option>
+            <option value="Sweden">Sweden</option>
+            <option value="Italy">Italy</option>
+            <option value="Spain">Spain</option>
+        </select>
+    </div> 
+    </form> */}
+    <div className='dropDownContainer'>
+        <div className="dropDown">
+            <div 
+              className='dropDownBtn'
+              onClick={(e) => {setIsActive(!isActive)}}
+              >{selectCountry ? (<div>{selectCountry}</div>) : "Choose one"} 
+            <div>&#9660;</div>
+            </div>
+           {isActive && (
+             <div className="dropDownContent" >
+               { countries.map((option, index)=>(
+                <div
+                    className='dropDownItem'
+                    key={index} 
+                    onClick={(e) =>{
+                    setSelectCountry(e.target.textContent);
+                    setIsActive(false);
+                    console.log(selectCountry);
+                    localStorage.setItem("Question3Score", selectCountry);
+                  }} 
+                 >{option}</div>
+               ))}
+             
+             
+         </div>
+           )}
+        </div>
+     </div>
     </>
   )
 }

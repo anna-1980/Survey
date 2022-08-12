@@ -161,4 +161,113 @@ button{
   color:black;
 }
 
+/* //-----------------------drop Down------------------------// */
 
+.select{
+  position: relative;
+  height: 3rem;
+  width: 20rem;
+  margin: 1rem;
+  overflow: hidden;
+  background: rgb(255, 255, 255);
+  border: 2px solid cyan ;
+}
+
+.select::after{
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: "\25BC";
+  font-family: "Inter", "system-ui";
+  /* background: rgb(83, 82, 82); */
+  padding: 0.8rem;
+  pointer-events: none;
+}
+
+/* //----------remove styles form select----------// */
+select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  background-color: transparent;
+  box-shadow: none;
+  margin: 0;
+  width: 100%;
+}
+
+select{
+  position: absolute;
+  border: 2px solid rgb(232, 15, 15);
+  height: 3rem;
+  /* width: 100px; */
+  padding: 0.5rem 1rem;
+  background-color: rgb(117, 115, 115);
+  color: rgb(254, 255, 254);
+  cursor: pointer;
+}
+
+select:focus + .focus {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+
+}
+option{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  background-color:red;
+  box-shadow: none;
+  margin: 0;
+  width: 100%;
+}
+
+/* //-----------second dropDown atempt---------------// */
+
+.dropDownContainer{
+  width: 100%;
+  height: 100%;
+}
+
+.dropDown{
+  position: relative;
+  width: 200px;
+  margin: 0 auto;
+  padding: 0;
+  background-color: rgb(121, 136, 122);
+  user-select: none;
+
+}
+
+.dropDown .dropDownBtn{
+  display: flex;
+  padding: 0.5rem 1rem ;
+  background-color: rgb(148, 140, 88);
+  align-items: center;
+  justify-content: space-between;
+  cursor: grabbing;
+}
+
+.dropDown .dropDownContent{
+  position: absolute;
+  background-color: #986d95;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 0.2rem 0.5rem;
+}
+
+.dropDown .dropDownContent .dropDownItem{
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.dropDown .dropDownContent .dropDownItem:hover{
+  padding: 0.5rem;
+  background-color: #7d954f;
+}
