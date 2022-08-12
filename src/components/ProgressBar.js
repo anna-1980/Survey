@@ -18,28 +18,32 @@ const ProgressBar = ({question1, question2, question3}) => {
         </div>
        ) : (<span></span>)}
 
-        {question2 ? (
-        <div className='progresBarContainer'>
-            <div 
-                 className='progresBar'
-                 style={{width: 66+"%"}}>
-            </div>  
-              
+       {question2 ? (
+        <div >
+            <h4 className='progresTrack'>QUESTION 2 OUT OF 3</h4>
+            <div className='progresBarContainer'>
+                <div 
+                    className='progresBar'
+                    style={{width: 33+"%"}}>
+                </div>  
+                
+            </div>
         </div>
        ) : (<span></span>)}
 
-        {question3 ? (
-        <div className='progresBarContainer'>
-            <div 
-                 className='progresBar'
-                 style={{width: 100+"%"}}>
-            </div>  
-              
+       {question3 ? (
+        <div >
+            <h4 className='progresTrack'>QUESTION 3 OUT OF 3</h4>
+            <div className='progresBarContainer'>
+                <div 
+                    className='progresBar'
+                    style={{width: 33+"%"}}>
+                </div>  
+                
+            </div>
         </div>
        ) : (<span></span>)}
-
-
-     
+ 
     </div>
   )
 }

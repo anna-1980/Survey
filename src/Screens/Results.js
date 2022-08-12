@@ -17,7 +17,7 @@ const Results = ({userNameInput, finalScore}) => {
     const resultsNext = (e) => {
         navigate( `/` );
         console.log("reset");
-        // localStorage.clear();
+        localStorage.clear();
         }
 
   return (
