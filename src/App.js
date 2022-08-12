@@ -27,8 +27,12 @@ function App() {
           setQuestion3Score(3)
         } else if(question3Answer === "Spain"){
           setQuestion3Score(3)
-        }else{
+        }else if(question3Answer === "Italy" || question3Answer === "Sweden"){
           setQuestion3Score(5)
+        }else if(question3Answer === "Spain"){
+          setQuestion3Score(5)
+        }else{
+          setQuestion3Score(0)
         }
         setFinalScore(
           (Number(question1Answer) + Number(question2Answer) + question3Score) / 0.16
@@ -45,8 +49,8 @@ function App() {
   return (
      <div className='mainContainer'>
          <div className='frame'>
-        {userNameInput ? (<h3 className='userName'>SURVEY FOR: {JSON.parse(userNameInput).toUpperCase()}</h3>) : (<h3 className='userName'>SURVEY FOR:</h3>) }
-     </div>
+        
+      </div>
         <Routes>
           <Route path="/" element={
             <MainScreen
@@ -72,7 +76,7 @@ function App() {
             <Question3 
              userNameInput={userNameInput} 
              setUserName={setUserName}
-             setQuestion2Answer={setQuestion3Answer}
+             setQuestion3Answer={setQuestion3Answer}
           />} />  
          <Route path="results" element={
             <Results 

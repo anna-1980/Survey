@@ -7,7 +7,7 @@ import DropDown from '../components/DropDown'
 const Results = ({userNameInput, finalScore}) => {
     let navigate = useNavigate();
     
-    let scoreBar = `50%`
+    let scoreBar = finalScore + "%"; 
 
     console.log(userNameInput+ 'from Results')
     const goBack = (e) => {
@@ -17,7 +17,7 @@ const Results = ({userNameInput, finalScore}) => {
     const resultsNext = (e) => {
         navigate( `/` );
         console.log("reset");
-        // localStorage.clear();
+        localStorage.clear();
         }
 
   return (
@@ -29,8 +29,11 @@ const Results = ({userNameInput, finalScore}) => {
     <h2 className='finalPoints'>{finalScore}</h2>
     <h4>Points</h4>
     <div 
+        className='resultBarContainer'>
+        <div 
         className='resultBar'
-        style={{width: scoreBar}}></div>
+        style={{width: scoreBar}}></div>    
+        </div>
     <ForwardButton onClick={resultsNext} 
           value="START NEW"/>
     <BackButton   

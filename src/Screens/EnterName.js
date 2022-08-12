@@ -30,16 +30,18 @@ const EnterName = ({userNameInput, setUserName}) => {
     <div className='mainContainer'> 
         <h3>who are you ?</h3>
         <h2>Please enter your name.</h2>
+        <div className='surveyQuestions'>
         <input 
         className='enterName' 
         type="text" 
         placeholder='John Doe'
         onChange={inputTextHandler}/>
+        </div>
         <ForwardButton onClick={enterNameNext} 
         value="NEXT"/>
         <BackButton   onClick={goBack} 
         value="BACK"/>
-
+      
     </div>
   )
 }

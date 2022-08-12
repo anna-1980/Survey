@@ -66,10 +66,14 @@ input[type="text"]{
 
 }
 
+.enterName:focus{
+  outline: none;
+} 
+
 button{
   height: 66px;
   width: 254px;
-  margin: 2rem auto;
+  margin: 0 auto;
   padding: 2rem 6rem;
   display: inline-block;
   color: black;
@@ -284,16 +288,38 @@ option{
   margin: 0;
 }
 
-.resultBar{
-  margin-top: 1.5rem;
+.resultBarContainer{
+  position: relative;
+  margin-top: 1.7rem;
+  margin-bottom: 5rem;
   height: 3rem;
   width: 50rem;
   position: relative;
   border: 2px solid white;
 }
-.resultBar::before{
+.resultBar{
   position: absolute;
-
-  background-color: rgb(117, 114, 114);
-  border: 2px solid white;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: white;
+  border: 2px solid transparent;
 }
+
+.progresBarContainer {
+  position: relative;
+  margin-top: 1.7rem;
+  height: 1rem;
+  width: 50rem;
+  border: 1px solid #707070;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.progresBar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: white;
+}
+ 

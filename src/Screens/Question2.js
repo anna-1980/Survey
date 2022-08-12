@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Routes, Route, useNavigate } from "react-router-dom";
 import ForwardButton from '../components/ForwardButton';
 import BackButton from '../components/BackButton';
+import ProgressBar from '../components/ProgressBar';
 
 const Question2 = ({userNameInput, setQuestion2Answer}) => {
     let navigate = useNavigate();
@@ -65,7 +66,10 @@ const handleChangeThree = () => {
         }, [checkedOne, checkedTwo, checkedThree, question2Score])
 
   return (
-    <>
+    <div className='mainContainer'>
+    <div className='frame'>
+        {userNameInput ? (<h3 className='userName'>SURVEY FOR: {JSON.parse(userNameInput).toUpperCase()}</h3>) : (<h3 className='userName'>SURVEY FOR:</h3>) }
+    </div>
     <h3>Question 2</h3>
     <h2>Please select at least one option</h2>
     <div className='surveyQuestions'>
@@ -104,7 +108,8 @@ const handleChangeThree = () => {
         onClick={goBack} 
         value="BACK"
        />
-    </>
+    <ProgressBar question2/>
+    </div>
     
   )
 }
