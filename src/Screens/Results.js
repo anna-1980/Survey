@@ -15,14 +15,17 @@ const Results = ({userNameInput, finalScore}) => {
     const resultsNext = (e) => {
         navigate( `/` );
         console.log("reset");
-        
+        localStorage.clear();
         }
 
   return (
     <>
-    <h3>Question 3</h3>
-    <h2>Where are you from?</h2>
-
+    <h3>RESULT</h3>
+    <h2>Your Score</h2>
+    <h3>{JSON.parse(userNameInput).toUpperCase()}</h3>
+    <br />
+    <h2 className='finalPoints'>50</h2>
+    <h4>Points</h4>
    
     <ForwardButton onClick={resultsNext} 
           value="START NEW"/>
