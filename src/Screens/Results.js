@@ -21,7 +21,7 @@ const Results = ({userNameInput, finalScore}) => {
         }
 
   return (
-    <>
+    <div className='mainContainer'>
     <h3>RESULT</h3>
     <h2>Your Score</h2>
     <h3>{JSON.parse(userNameInput).toUpperCase()}</h3>
@@ -39,7 +39,7 @@ const Results = ({userNameInput, finalScore}) => {
     <BackButton   
         onClick={goBack} 
         value="BACK" />
-    </>
+    </div>
   )
 }
 
