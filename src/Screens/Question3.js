@@ -4,6 +4,7 @@ import ForwardButton from '../components/ForwardButton';
 import BackButton from '../components/BackButton';
 import DropDown from '../components/DropDown';
 import ProgressBar from '../components/ProgressBar';
+import { ArrowCircleRight } from "phosphor-react";
 
 const Question3 = ({userNameInput, setQuestion3Answer}) => {
     let navigate = useNavigate();
@@ -32,7 +33,9 @@ const Question3 = ({userNameInput, setQuestion3Answer}) => {
             <DropDown />
         </div>
     <ForwardButton onClick={question3Next} 
-          value="FINISH"/>
+          value="FINISH"
+          iconValue={<ArrowCircleRight size={32} />}
+          />
     <BackButton   
         onClick={goBack} 
         value="BACK" />

@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 import { Routes, Route, useNavigate } from "react-router-dom";
 import ForwardButton from '../components/ForwardButton';
 import BackButton from '../components/BackButton';
-import DropDown from '../components/DropDown'
+import DropDown from '../components/DropDown';
+import { ArrowCircleRight } from "phosphor-react";
 
 const Results = ({userNameInput, finalScore}) => {
     let navigate = useNavigate();
@@ -35,10 +36,8 @@ const Results = ({userNameInput, finalScore}) => {
         style={{width: scoreBar}}></div>    
         </div>
     <ForwardButton onClick={resultsNext} 
-          value="START NEW"/>
-    <BackButton   
-        onClick={goBack} 
-        value="BACK" />
+          value="START NEW"
+          />
     </div>
   )
 }

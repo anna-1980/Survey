@@ -3,6 +3,7 @@ import { Routes, Route, useNavigate } from "react-router-dom";
 import ForwardButton from '../components/ForwardButton';
 import BackButton from '../components/BackButton';
 import ProgressBar from '../components/ProgressBar';
+import { ArrowCircleRight } from "phosphor-react";
 
 const Question2 = ({userNameInput, setQuestion2Answer}) => {
     let navigate = useNavigate();
@@ -103,7 +104,9 @@ const handleChangeThree = () => {
     </div>
 
     <ForwardButton onClick={question2Next} 
-          value="NEXT"/>
+          value="NEXT"
+          iconValue={<ArrowCircleRight size={32} />}
+          />
     <BackButton   
         onClick={goBack} 
         value="BACK"

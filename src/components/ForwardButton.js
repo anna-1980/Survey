@@ -1,11 +1,15 @@
-import React from 'react'
+import { ArrowCircleRight } from "phosphor-react";
 
-const ForwardButton = ({value, onClick, type}) => {
+
+const ForwardButton = ({value, iconValue, onClick, type}) => {
+
   return (
     <button
     onClick={() => onClick()}
     type={type}
-    >{value}</button>
+    >{value}
+    {iconValue}
+    </button>
   )
 }
 
