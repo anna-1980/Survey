@@ -13,7 +13,7 @@ const DropDown = () => {
               className='dropDownBtn'
               onClick={(e) => {setIsActive(!isActive)}}
               >{selectCountry ? (<div>{selectCountry}</div>) : "Choose one"} 
-            <div>&#9660;</div>
+            <div id='dropDownArrow'>&#9660;</div>
             </div>
            {isActive && (
              <div className="dropDownContent" >

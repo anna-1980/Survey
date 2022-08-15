@@ -195,6 +195,11 @@ button{
   user-select: none;
 }
 
+#dropDownArrow{
+  font-size: 1rem;
+  }
+  
+
 .dropDown .dropDownBtn{
   display: flex;
   padding: 0.5rem 1rem ;
@@ -206,9 +211,6 @@ button{
   cursor: pointer;
 }
 
-.dropDownBtn > div{
-font-size: 1rem;
-}
 
 .dropDown .dropDownContent{
   position: absolute;
