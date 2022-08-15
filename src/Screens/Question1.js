@@ -38,9 +38,9 @@ const Question1 = ({userNameInput, setUserName, question1Answer, setQuestion1Ans
     }
 
     const question1Next = (e) => {
-        navigate( `/question2` );
         console.log("go to question2");
         setQuestion1Answer(localStorage.getItem("Question1Score"));
+        localStorage.getItem("Question1Score") ? navigate( `/question2` ) : alert('please choose one')
       }
 //-------handlers------------------//
 

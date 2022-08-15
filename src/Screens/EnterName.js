@@ -6,25 +6,30 @@ import BackButton from '../components/BackButton';
 const EnterName = ({userNameInput, setUserName}) => {
 
     let navigate = useNavigate();
-    
+
+//---------Handlers----------------------//
     const goBack = (e) => {
         console.log('go back')
         navigate(-1);
     }
 
     const enterNameNext = (e) => {
-        navigate( `/question1` );
         console.log("go to question1");
         setUserName(localStorage.getItem('userName'));
+        localStorage.getItem("userName") ? navigate( `/question1` ) : alert('Please enter your name')
       }
 
     const inputTextHandler = (e) => {
-        // setUserName(e.target.value);
-        console.log(e.target.value);
+        // console.log(e.target.value);
         setUserName(localStorage.setItem("userName", JSON.stringify(e.target.value)));
         console.log("handle input field" + userNameInput);
     };
 
+    const pressEnter = (e) => {
+      if(e.key === "Enter") {
+        localStorage.getItem("userName") ? navigate( `/question1` ) : alert('Please enter your name')
+      }
+    }
  
   return (
     <div className='mainContainer'> 
@@ -35,7 +40,9 @@ const EnterName = ({userNameInput, setUserName}) => {
         className='enterName' 
         type="text" 
         placeholder='John Doe'
-        onChange={inputTextHandler}/>
+        onChange={inputTextHandler}
+        onKeyUp={pressEnter}
+        />
         </div>
         <ForwardButton onClick={enterNameNext} 
         value="NEXT"/>

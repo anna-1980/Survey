@@ -34,9 +34,10 @@ const handleChangeThree = () => {
         navigate(-1);}
 
     const question2Next = (e) => {
-        navigate( `/question3` );
+        // navigate( `/question3` );
         console.log("go to question3");
         setQuestion2Answer(localStorage.getItem("Question2Score"));
+        localStorage.getItem("Question2Score") > 0 ? navigate( `/question3` ) : alert('please choose one')
         }
 
     useEffect(() => {
@@ -64,7 +65,7 @@ const handleChangeThree = () => {
         }
         console.log("Question2Score " + question2Score);
         setQuestion2Score(localStorage.setItem("Question2Score", question2Score))
-        }, [checkedOne, checkedTwo, checkedThree, question2Score])
+        }, [checkedOne, checkedTwo, checkedThree])
 
   return (
     <div className='mainContainer'>

@@ -15,9 +15,9 @@ const Question3 = ({userNameInput, setQuestion3Answer}) => {
         navigate(-1);}
 
     const question3Next = (e) => {
-        navigate( `/results` );
         console.log("go to results");
         setQuestion3Answer(localStorage.getItem("Question3Score"));
+        localStorage.getItem("Question3Score") ? navigate( `/results` ) : alert('please choose one country')
         }
 
     

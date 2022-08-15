@@ -147,7 +147,6 @@ button{
   font-family: "Inter", "system-ui";
   font-size: 1.8rem;
   text-align: center;
-  transform: scaleY(0.8);
   color:black;
 }
 
@@ -172,9 +171,8 @@ button{
   padding-left: 0.4rem;
   /* background-color: pink; */
   font-family: "Inter", "system-ui";
-  font-weight: 300;
+  font-weight: 500;
   font-size: 1.8rem;
-  transform: scaleX(1.6);
   color:black;
 }
 

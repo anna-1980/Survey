@@ -38,12 +38,12 @@ function App() {
           (Number(question1Answer) + Number(question2Answer) + question3Score) / 0.16
         )
         // setUserName(localStorage.getItem('userName'));
-        console.log("Name from App.js" + userNameInput)
-        console.log("Answer1 App.js value = " + question1Answer)
-        console.log("Answer2 App.js value = " + question2Answer)
-        console.log("Answer3 App.js value = " + question3Answer)
-        console.log("countryScore value = " + question3Score)
-        console.log("FinalScore value = " + finalScore)
+        // console.log("Name from App.js" + userNameInput)
+        // console.log("Answer1 App.js value = " + question1Answer)
+        // console.log("Answer2 App.js value = " + question2Answer)
+        // console.log("Answer3 App.js value = " + question3Answer)
+        // console.log("countryScore value = " + question3Score)
+        // console.log("FinalScore value = " + finalScore)
       }, [userNameInput, question1Answer, question2Answer, question3Answer, question3Score, finalScore]);
 
   return (
