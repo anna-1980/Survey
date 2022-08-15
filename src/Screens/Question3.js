@@ -1,5 +1,4 @@
-import { useEffect, useState } from 'react';
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import ForwardButton from '../components/ForwardButton';
 import BackButton from '../components/BackButton';
 import DropDown from '../components/DropDown';
@@ -9,18 +8,15 @@ import { ArrowCircleRight } from "phosphor-react";
 const Question3 = ({userNameInput, setQuestion3Answer}) => {
     let navigate = useNavigate();
 
-    console.log(userNameInput+ 'from Question3')
+//-------Handlers------------------//
     const goBack = (e) => {
-        console.log('go back')
         navigate(-1);}
 
     const question3Next = (e) => {
-        console.log("go to results");
         setQuestion3Answer(localStorage.getItem("Question3Score"));
         localStorage.getItem("Question3Score") ? navigate( `/results` ) : alert('please choose one country')
         }
-
-    
+//-------Handlers END------------------//    
 
   return (
   <div className='mainContainer'>

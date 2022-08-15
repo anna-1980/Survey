@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import ForwardButton from '../components/ForwardButton';
 import BackButton from '../components/BackButton';
 import ProgressBar from '../components/ProgressBar';
@@ -7,11 +7,14 @@ import { ArrowCircleRight } from "phosphor-react";
 
 const Question1 = ({userNameInput, setUserName, question1Answer, setQuestion1Answer}) => {
     let navigate = useNavigate();
-//-----Component State-------------//  
+
+//-----Component State START-------------//  
     const [checkedOne, setCheckedOne] = useState(false);
     const [checkedTwo, setCheckedTwo] = useState(false);
     const [checkedThree, setCheckedThree] = useState(false);
+//-----Component State END-------------//  
 
+//-------Handlers------------------//
     const handleChangeOne = () => {
         setCheckedOne(!checkedOne);
         setCheckedTwo(false);
@@ -29,31 +32,24 @@ const Question1 = ({userNameInput, setUserName, question1Answer, setQuestion1Ans
         setCheckedTwo(false);
         setCheckedThree(!checkedThree);
       };
-//-----Component State-------------//  
 
-//-------handlers------------------//
     const goBack = (e) => {
-        console.log('go back')
         navigate(-1);
     }
 
     const question1Next = (e) => {
-        console.log("go to question2");
         setQuestion1Answer(localStorage.getItem("Question1Score"));
         localStorage.getItem("Question1Score") ? navigate( `/question2` ) : alert('please choose one')
       }
-//-------handlers------------------//
+//-------Handlers END------------------//
 
     useEffect(() => {
-       console.log("from question1 " + userNameInput );
        if (checkedOne){
         localStorage.setItem("Question1Score", "5")
        }else if(checkedTwo){
-        console.log('two');
         localStorage.setItem("Question1Score", "3")
        } else if (checkedThree) {
         localStorage.setItem("Question1Score", "0")
-        console.log('three')
        }
     }, [checkedOne, checkedTwo, checkedThree])
 

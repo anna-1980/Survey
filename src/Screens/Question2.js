@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import ForwardButton from '../components/ForwardButton';
 import BackButton from '../components/BackButton';
 import ProgressBar from '../components/ProgressBar';
@@ -8,15 +8,16 @@ import { ArrowCircleRight } from "phosphor-react";
 const Question2 = ({userNameInput, setQuestion2Answer}) => {
     let navigate = useNavigate();
 
-//-----Component State-------------//  
+//-----Component State START-------------//  
 const [checkedOne, setCheckedOne] = useState(false);
 const [checkedTwo, setCheckedTwo] = useState(false);
 const [checkedThree, setCheckedThree] = useState(false);
 const [question2Score, setQuestion2Score] = useState();
+//-----Component State END-------------//  
 
+//-------Handlers------------------//
 const handleChangeOne = () => {
     setCheckedOne(!checkedOne);
-
   };
 
 const handleChangeTwo = () => {
@@ -26,19 +27,15 @@ const handleChangeTwo = () => {
 const handleChangeThree = () => {
     setCheckedThree(!checkedThree);
   };
-//-----Component State-------------//  
 
-    console.log(userNameInput+ 'from Question2')
-    const goBack = (e) => {
-        console.log('go back')
-        navigate(-1);}
+const goBack = (e) => {
+    navigate(-1);}
 
-    const question2Next = (e) => {
-        // navigate( `/question3` );
-        console.log("go to question3");
-        setQuestion2Answer(localStorage.getItem("Question2Score"));
-        localStorage.getItem("Question2Score") > 0 ? navigate( `/question3` ) : alert('please choose one')
-        }
+const question2Next = (e) => {
+    setQuestion2Answer(localStorage.getItem("Question2Score"));
+    localStorage.getItem("Question2Score") > 0 ? navigate( `/question3` ) : alert('please choose one')
+    }
+//-------Handlers END------------------//
 
     useEffect(() => {
         console.log("from question1 " + userNameInput );

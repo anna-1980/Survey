@@ -1,5 +1,4 @@
-import {useState, useEffect} from 'react';
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import ForwardButton from '../components/ForwardButton';
 import BackButton from '../components/BackButton';
 
@@ -20,7 +19,6 @@ const EnterName = ({userNameInput, setUserName}) => {
       }
 
     const inputTextHandler = (e) => {
-        // console.log(e.target.value);
         setUserName(localStorage.setItem("userName", JSON.stringify(e.target.value)));
         console.log("handle input field" + userNameInput);
     };

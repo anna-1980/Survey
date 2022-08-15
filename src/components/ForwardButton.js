@@ -1,5 +1,3 @@
-import { ArrowCircleRight } from "phosphor-react";
-
 
 const ForwardButton = ({value, iconValue, onClick, type}) => {
 

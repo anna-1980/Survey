@@ -1,25 +1,17 @@
-import { useEffect, useState } from 'react';
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import ForwardButton from '../components/ForwardButton';
-import BackButton from '../components/BackButton';
-import DropDown from '../components/DropDown';
-import { ArrowCircleRight } from "phosphor-react";
 
 const Results = ({userNameInput, finalScore}) => {
-    let navigate = useNavigate();
-    
-    let scoreBar = finalScore + "%"; 
+  let navigate = useNavigate();
+  let scoreBar = finalScore + "%"; 
 
-    console.log(userNameInput+ 'from Results')
-    const goBack = (e) => {
-        console.log('go back')
-        navigate(-1);}
-
+//-------Handlers------------------//
     const resultsNext = (e) => {
         navigate( `/` );
         console.log("reset");
         localStorage.clear();
         }
+//-------Handlers END------------------//
 
   return (
     <div className='mainContainer'>

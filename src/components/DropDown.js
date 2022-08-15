@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 const DropDown = () => {
   const [isActive, setIsActive] = useState(false);
@@ -41,14 +41,3 @@ const DropDown = () => {
 
 export default DropDown
 
-{/* <>
-<label for="country">Please choose your country?</label>
-
-<select id="country" name="country" onChange={chooseCountry}>
-<option value="Germnay">Germnay</option>
-<option value="Sweden">Sweden</option>
-<option value="Italy">Italy</option>
-<option value="Spain">Spain</option>
-</select>
-
-</> */}
